@@ -86,6 +86,11 @@ print(user_info['fav_language'])
 unique_numbers={1,2,2,2,2,3,3,2,2,4,4,5,6,7,7,7,5,5,7,4}
 print(unique_numbers)
 
+
+"""
+https://jimmy-ai.tistory.com/239
+"""
+
 #방법 1: sorted() 사용 (가장 간단한 방식)
 numbers = [2, 22, 54, 7, 9, 4, 23, 5, 78, 4, 23455346534, 43342, 43567]
 sorted_numbers = sorted(numbers)  # 리스트 정렬
