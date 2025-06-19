@@ -25,8 +25,11 @@ https://m.blog.naver.com/sohoon1002/222185049729
 
 파장: 파동의 변위-위치 그래프 분석에서 마루와 마루 사이의 거리 >> 아마 존재마다 폭이 다른듯?
 
+node
 
+vercel
 
+figma
 
 
 """

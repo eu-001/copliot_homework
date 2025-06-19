@@ -21,3 +21,5 @@ for i in range(len(numbers) - 1):
             numbers[j], numbers[j + 1] = numbers[j + 1], numbers[j]
 for num in numbers:
     print(num)
+
+    
