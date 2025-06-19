@@ -87,3 +87,45 @@ unique_numbers={1,2,2,2,2,3,3,2,2,4,4,5,6,7,7,7,5,5,7,4}
 print(unique_numbers)
 
 #homework 8
+"""
+한 명 이상의 사용자를 저장하는 딕셔너리를 만들고
+
+각 사람의 이름과 나이를 출력하는 코드를 작성해 보세요.
+
+for문을 활용해서 자동으로 출력되게 해보자!
+"""
+people1 = {"name1": "yuri", "age1": "17"}
+people2 = {"name2":"james", "age2": "22"}
+people3 = {"name3": "brik", "age3": "21"}
+people_info= [people1, people2, people3]
+for name in people_info:
+    print(f"{people_info}")
+
+#코파일럿 지적 부분
+people1 = {"name": "yuri", "age": "17"}
+people2 = {"name": "james", "age": "22"}
+people3 = {"name": "brik", "age": "21"}
+people_info = [people1, people2, people3]
+for person in people_info:
+    print(f"{person['name']}의 나이는 {person['age']}살입니다.")  
+
+"""
+혹시 input()으로 사람들 정보를 직접 받아서 딕셔너리 리스트를 만드는 것도 해볼래?
+"""
+typing_info = input("이름을 입력하시오:")
+typing_info1 = input("나이를 입력하시오:")
+info = {"name" :[typing_info], "age": [typing_info1]}
+for list in info :
+    print(f"{info['name']}의 나이는 {info['age']}살입니다.")
+
+#수정한 코드 (리스트 없이 간단하게)
+typing_info = input("이름을 입력하시오: ")
+typing_info1 = input("나이를 입력하시오: ")
+info = {"name": typing_info, "age": typing_info1}
+print(f"{info['name']}의 나이는 {info['age']}살입니다.")
+
+#리스트를 유지한 코드
+typing_info = input("이름을 입력하시오: ")
+typing_info1 = input("나이를 입력하시오: ")
+info = {"name": [typing_info], "age": [typing_info1]}
+print(f"{info['name'][0]}의 나이는 {info['age'][0]}살입니다.")
