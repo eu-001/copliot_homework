@@ -47,3 +47,22 @@ def even_or_odd(v):
         return(f"{v}는 홀수입니다.") 
 ho = even_or_odd(8)
 print(ho)
+'''
+age=input("나이를 입력하시오:")
+x=int(age)   # age=int(input("나이를 입력하시오:)) 이렇게 쓰면 더 깔끔함.
+def adult(x):
+    if x >= 20:
+        print("성인입니다.")
+    else:
+        print("미성년자입니다.")
+adult(x)              # 리턴 안쓰면 굳이 안에 채울 필요 없는듯  
+'''
+#코파일럿쌤이 다듬은 버전
+def adult():
+    name= input("이름을 입력하시오:")
+    age1=int(input("나이를 입력하시오:"))
+    if age1 >= 20:
+        print(f"{name}님은 성인입니다.")
+    else:
+        print(f"{name}님은 미성년자입니다.")
+adult()            
