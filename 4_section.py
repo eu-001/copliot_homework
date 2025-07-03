@@ -56,7 +56,7 @@ def adult(x):
     else:
         print("미성년자입니다.")
 adult(x)              # 리턴 안쓰면 굳이 안에 채울 필요 없는듯  
-'''
+
 #코파일럿쌤이 다듬은 버전
 def adult():
     name= input("이름을 입력하시오:")
@@ -65,6 +65,16 @@ def adult():
         return(f"{name}님은 성인입니다.")
     else:
         return(f"{name}님은 미성년자입니다.")
-
-
+adult()
+'''
+#adult()함수에 return 쓴 버전
+def adult(name, age):
+    if age >= 20:
+        return f"{name}님은 성인입니다." #리턴문은 펑션 굳이 괄호로 안감싸도 됨!
+    else:
+        return f"{name}님은 미성년자입니다."
+name_input =  input("이름을 입력하시오:")
+age_input = int(input("나이를 입력하세요:")) #int가 입력한 숫자를 정수로 변환
+result = adult(name_input, age_input)
+print(result)
 
