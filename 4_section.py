@@ -62,7 +62,9 @@ def adult():
     name= input("이름을 입력하시오:")
     age1=int(input("나이를 입력하시오:"))
     if age1 >= 20:
-        print(f"{name}님은 성인입니다.")
+        return(f"{name}님은 성인입니다.")
     else:
-        print(f"{name}님은 미성년자입니다.")
-adult()            
+        return(f"{name}님은 미성년자입니다.")
+
+
+
