@@ -66,18 +66,29 @@ finally 블록에서 로그 저장! """
 # #save_log(username)            
 
 #미션
+""" datetime"""
+from datetime import datetime
+
+now = datetime.now()
+print(now)   # 2025-07-04 16:50:23.456789
+time_str = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+print(time_str) # 예: 2025-07-04 16:51:09
+
 def logiin_try():
     try:
         userID = input("아이디를 입력하시오:")
         userIP = input("아이피주소를 입력하시오:") #짜피 순수 숫자로 입력하는게 아니므로 int 쓸 필요가 없음!
+
+        time_str = datetime.now().strftime("%Y-%m-%d %H:%M:%S") #def문 밖에 있으면 result1에 적용이 안된다!
+
         if userIP.startswith("192.") or userIP.endswith(".255"):
-            result1 = f"[{userID}] - 의심 접속 탐지 (IP: {userIP})" #if문의 참인 경우를 초점에 맞춰서 의심 접속 탐지를 찾기
+            result1 = f"[{time_str}][{userID}] - 의심 접속 탐지 (IP: {userIP})" #if문의 참인 경우를 초점에 맞춰서 의심 접속 탐지를 찾기
         else:
-            result1 = f"[{userID}] - 정상 접속 (IP: {userIP})"  
+            result1 = f"[{time_str}][{userID}] - 정상 접속 (IP: {userIP})"  
     except ValueError: 
-        result1 = f"[{userID}] - 예외 발생 (입력 오류)" #아예 구조 자체가 이상한 경우로
+        result1 = f"[{time_str}][{userID}] - 예외 발생 (입력 오류)" #아예 구조 자체가 이상한 경우로
     finally:
         with open("access_log.txt", "a", encoding="utf-8")as f:
             f.write(result1 + "\n")
         print("로그 저장 완료!")    
-logiin_try()                
+logiin_try()     
