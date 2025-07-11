@@ -1,7 +1,7 @@
 import os
 import pandas as pd
 
-folder = r"C:\Users\itg\Documents\copliot_homework\20250711111244"
+folder = r"C:\Users\itg\Documents\copliot_homework\20250711111210"
 
 for filename in os.listdir(folder):
     if filename.lower().endswith(('.xls', '.xlsx')):
